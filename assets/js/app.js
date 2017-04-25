@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var x = document.getElementsByClassName("img-slider");
 var dots = document.getElementsByClassName("button-slider");
 
@@ -145,3 +144,22 @@ inputs[i].onblur = comentario;
 }
 
 
+
+var ultimoScrollTop = 0;
+window.addEventListener('scroll',function(){
+	var navHeader = document.getElementById('nav-header');
+
+	var accionScroll = window.pageYOffset || document.documentElement.scrollTop;
+	if (accionScroll > ultimoScrollTop) {
+		navHeader.classList.remove('bg-header');
+		navHeader.style.opacity = 0;
+	}
+	else{
+		navHeader.classList.add('bg-header');
+		navHeader.style.opacity = 1 ;
+		if (accionScroll <= 3) {
+			navHeader.classList.remove('bg-header');
+		}
+	}
+	ultimoScrollTop = accionScroll;
+},false);
