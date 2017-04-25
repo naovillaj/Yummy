@@ -75,41 +75,56 @@ for(var i=1; i<=video.length+1; i++){
 	function playPause() {
 		
 		if (this.childNodes[1].paused){ 
-	    	this.childNodes[1].nextElementSibling.innerText = "||";
-	    	if(this.childNodes[1].nextElementSibling == "||"){
-	    		this.childNodes[1].addEventListener("play", function(){
-	    			this.childNodes[1].setAttribute("controls", ""); 
-	    		});
-	    	}	    	
-	        
+			this.childNodes[1].play();
+	    	this.childNodes[1].addEventListener("play", function(){
+	    		console.log(this);
+		    	this.setAttribute("controls", "");
+		        this.nextElementSibling.innerText = "||";
+	    	});
+	         
 	    }else{
-	    	this.childNodes[1].nextElementSibling.innerText = ">"; 
-	    	if(this.childNodes[1].nextElementSibling == ">"){
-	    		this.childNodes[1].addEventListener("pause", function(){
-	    			this.childNodes[1].removeAttribute("controls")
-	    		});	
-	    	}	        
+	    	this.childNodes[1].pause(); 
+	        this.childNodes[1].addEventListener("pause", function(){
+	        	console.log(this);
+		        this.removeAttribute("controls")
+		        this.nextElementSibling.innerText = ">";
+	        });
+	        
+	    } 
+	} 
+}
+
+for(var i=1; i<=video.length+1; i++){
+	function pausePlay() {
+		
+		if (this.childNodes[1].played){ 
+			this.childNodes[1].pause();
+	    	this.childNodes[1].addEventListener("pause", function(){
+	    		this.removeAttribute("controls", "");
+		        this.nextElementSibling.innerText = ">";
+	    	});
+	         
+	    }else{
+	    	this.childNodes[1].play(); 
+	        this.childNodes[1].addEventListener("play", function(){
+	        	this.setAttribute("controls")
+		        this.nextElementSibling.innerText = "||";
+	        });
 	        
 	    } 
 	} 
 }
 
 
-// button[0].parentNode.addEventListener("mouseover", function(e){
-// 	console.log("dsdsa"+video[0].play());
-// });
-
 for(var i=0; i<button.length; i++){
 
 	button[i].parentNode.addEventListener("mouseover", playPause);
-	// console.log(this);
 
 }
 
 for(var i=0; i<button.length; i++){
 
-	button[i].parentNode.addEventListener("mouseout", playPause);
-	// console.log(this);
+	button[i].parentNode.addEventListener("mouseout", pausePlay);
 
 }
 
