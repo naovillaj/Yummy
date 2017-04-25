@@ -6,6 +6,7 @@ showDivs(slideIndex);
 
 for (var i = 0; i < dots.length; i++) {
 	dots[i].addEventListener('click',currentDiv);
+	// x[i].style.display="block";
 	if(i==0){
 		x[0].style.display="block";
 	}
@@ -15,12 +16,23 @@ for (var i = 0; i < dots.length; i++) {
 	if(i==2){
 		x[2].style.display="block";
 	}	
-	// console.log(x[i]);
+	console.log(this);
 }
 
 function currentDiv(n) {
-  showDivs(slideIndex);
-  console.log(slideIndex);
+	if(n.screenX==367 && n.screenY==355){
+		showDivs(slideIndex-1);
+	}
+
+	if(n.screenX==395 && n.screenY==357){
+		showDivs(slideIndex);
+	}
+
+	if(n.screenX==428 && n.screenY==358){
+		showDivs(slideIndex+1);
+	}
+  
+  console.log(n);
 }
 
 function showDivs(n) {

@@ -151,3 +151,43 @@ a{
 #h1Postres{
 	color: #C80600;
 }
+
+form{
+	margin: 20px 340px;
+	padding: 20px;
+	width: 600px;
+	height: 100%;
+	border-radius: 5px;
+	border: 2px solid black;
+}
+#form-subscribe-heading{
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px 1px #DEDEDE;
+}
+
+label{
+	width: 300px;
+	height: 140px;
+	margin-right: 10px;
+}
+
+input {
+  
+  border: 2px solid #999;
+  border-radius: 7px;
+  -webkit-appearance: none;
+  width: 400px;
+  height: 40px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.btn, .btn:hover{
+  background-color: none;
+  border-color: #333;
+  height: 40px;
+  width: 180px;
+  border-radius: 7px;
+  margin-left: 200px;
+}
