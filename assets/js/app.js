@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var x = document.getElementsByClassName("img-slider");
 var dots = document.getElementsByClassName("button-slider");
 
@@ -6,14 +5,22 @@ var slideIndex = 1;
 showDivs(slideIndex);
 
 for (var i = 0; i < dots.length; i++) {
-	dots[i].addEventListener('click',currentDiv(i));
-	console.log(this);
-	
+	dots[i].addEventListener('click',currentDiv);
+	if(i==0){
+		x[0].style.display="block";
+	}
+	if(i==1){
+		x[1].style.display="block";
+	}
+	if(i==2){
+		x[2].style.display="block";
+	}	
+	// console.log(x[i]);
 }
 
-
 function currentDiv(n) {
-  showDivs(slideIndex = n);
+  showDivs(slideIndex);
+  console.log(slideIndex);
 }
 
 function showDivs(n) {
@@ -25,12 +32,13 @@ function showDivs(n) {
   }
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" button-white", "");
+
   }
   x[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " button-white";
 }
 
-var Index = 0;
+var index = 0;
 slider();
 
 function slider() {
@@ -38,34 +46,53 @@ function slider() {
     for (var i = 0; i < imgSlider.length; i++) {
        imgSlider[i].style.display = "none";  
     }
-    Index++;
-    if (Index > imgSlider.length) {Index = 1}    
-    imgSlider[Index-1].style.display = "block";
-    setTimeout(slider, 3500); 
+    index++;
+    if (index > imgSlider.length) {index = 1}    
+    imgSlider[index-1].style.display = "block";
+    setTimeout(slider, 3500);
 }
 
 var button = document.getElementsByClassName("play");
 var video = document.getElementsByClassName("video");
 
+// for(var i=1; i<=video.length+1; i++){
+// 	function playPause() {
+		
+// 		if (this.childNodes[1].paused){ 
+// 	    	this.childNodes[1].play();
+// 	        this.childNodes[1].setAttribute("controls", "");
+// 	        this.childNodes[1].nextElementSibling.innerText = "||"; 
+// 	    }else{ 
+// 	        this.childNodes[1].pause();
+// 	        this.childNodes[1].removeAttribute("controls")
+// 	        this.childNodes[1].nextElementSibling.innerText = ">";
+// 	    } 
+// 	} 
+// }
+
+	
 for(var i=1; i<=video.length+1; i++){
 	function playPause() {
-		// console.log(this.childNodes[1].nextElementSibling.innerText="||")
-		console.log(this.childNodes[i]);
-		console.log(button[1].value);
-		// console.log(this.childNodes[1]);
-	    if (this.childNodes[1].paused){ 
-	    	// console.log(button[i]);
-	        this.childNodes[1].play();
-	        this.childNodes[1].setAttribute("controls", "");
-	        this.childNodes[1].nextElementSibling.innerText = "||"; 
-	    }else{ 
-	        this.childNodes[1].pause();
-	        this.childNodes[1].removeAttribute("controls")
-	        this.childNodes[1].nextElementSibling.innerText = ">";
+		
+		if (this.childNodes[1].paused){ 
+	    	this.childNodes[1].nextElementSibling.innerText = "||";
+	    	if(this.childNodes[1].nextElementSibling == "||"){
+	    		this.childNodes[1].addEventListener("play", function(){
+	    			this.childNodes[1].setAttribute("controls", ""); 
+	    		});
+	    	}	    	
+	        
+	    }else{
+	    	this.childNodes[1].nextElementSibling.innerText = ">"; 
+	    	if(this.childNodes[1].nextElementSibling == ">"){
+	    		this.childNodes[1].addEventListener("pause", function(){
+	    			this.childNodes[1].removeAttribute("controls")
+	    		});	
+	    	}	        
+	        
 	    } 
 	} 
 }
-
 
 
 // button[0].parentNode.addEventListener("mouseover", function(e){
@@ -143,5 +170,11 @@ var comentario = function(){
 for(var i = 0; i< inputs.length; i++){
 inputs[i].onblur = comentario;
 }
+
+document.getElementById("enviar").addEventListener("click", function(e){
+	e.preventDefault();
+	document.getElementById("formulario").reset();
+
+})
 
 
