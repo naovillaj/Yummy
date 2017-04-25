@@ -54,22 +54,6 @@ function slider() {
 
 var button = document.getElementsByClassName("play");
 var video = document.getElementsByClassName("video");
-
-// for(var i=1; i<=video.length+1; i++){
-// 	function playPause() {
-		
-// 		if (this.childNodes[1].paused){ 
-// 	    	this.childNodes[1].play();
-// 	        this.childNodes[1].setAttribute("controls", "");
-// 	        this.childNodes[1].nextElementSibling.innerText = "||"; 
-// 	    }else{ 
-// 	        this.childNodes[1].pause();
-// 	        this.childNodes[1].removeAttribute("controls")
-// 	        this.childNodes[1].nextElementSibling.innerText = ">";
-// 	    } 
-// 	} 
-// }
-
 	
 for(var i=1; i<=video.length+1; i++){
 	function playPause() {
@@ -189,6 +173,7 @@ inputs[i].onblur = comentario;
 document.getElementById("enviar").addEventListener("click", function(e){
 	e.preventDefault();
 	document.getElementById("formulario").reset();
+	document.getElementById("enviar").nextElementSibling.innerText = "Todos los datos deben de estar llenos";
 
 })
 
