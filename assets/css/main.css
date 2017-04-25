@@ -208,12 +208,12 @@ footer{
 	position: absolute;
 	width: 100%;
 	height: 120px;
-	background-color: yellow;
 	margin-top: 80px;
 }
 .box-text{
+	margin: 0 5%;
 	display: inline-block;
-	width: 150px;
+	width: 250px;
 	height: 100%;
-	background-color: blue;
+	background-color: white;
 }
