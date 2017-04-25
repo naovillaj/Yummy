@@ -163,8 +163,9 @@ body{
 
 #container-entradas,
 #container-principal,
-#container-postres{
-	width: 100%;
+#container-postres,
+#container-suscribete{
+	background-size: cover;
 	height: 500px;
 }
 
@@ -182,4 +183,37 @@ body{
 /*Postres*/
 #container-postres{
 	background-image: url('../img/slide6.png');
+}
+
+/*Suscribirse*/
+#container-suscribete{
+	background-image: url('../img/suscribete.png');
+	height: 700px;
+	bottom: 0;
+}
+
+/*Footer*/
+footer{
+	background-color: black;
+}
+#container-footer{
+	background-image: url('../img/footer.png');
+	bottom: 44px;
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+#text-footer{
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	background-color: yellow;
+	margin-top: 80px;
+}
+.box-text{
+	display: inline-block;
+	width: 150px;
+	height: 100%;
+	background-color: blue;
 }
