@@ -10,11 +10,11 @@
 	<!-- HEADER -->
 	<header>
 		<nav id="nav-header">
-			<ul>
+			<ul class="p-r">
 				<li class="menu-list d-ib"><a href="index.html">INICIO</a></li>
 				<li class="menu-list d-ib"><a href="#nosotros">NOSOTROS</a></li>
 				<li class="menu-list d-ib"><a href="#entradas">ENTRADAS</a></li>
-				<li class="logo d-ib"><a href="index.html">Logo</a></li>
+				<li class="logo d-ib"><a href="index.html">Yummy!</a></li>
 				<li class="menu-list d-ib"><a href="#principal">PRINCIPALES</a></li>
 				<li class="menu-list d-ib"><a href="#postres">POSTRES</a></li>
 				<li class="menu-list d-ib"><a href="#suscribete">SUSCRIBETE</a></li>
@@ -27,111 +27,118 @@
 		<img class="img-slider" src="assets/img/slide1.png" alt="">
 		<img class="img-slider" src="assets/img/slide2.png" alt="">
 		<img class="img-slider" src="assets/img/slide3.png" alt="">
-		<div class="button-box">
-			<span class="button-slider" id="button-slide-1"></span>
-			<span class="button-slider" id="button-slide-2"></span>
-			<span class="button-slider" id="button-slide-3"></span>
-		</div>
+		<!-- <div class="button-box">
+			<span class="button-slider d-ib" id="button-slide-1"></span>
+			<span class="button-slider d-ib" id="button-slide-2"></span>
+			<span class="button-slider d-ib" id="button-slide-3"></span>
+		</div> -->
 	</section>
 	<section id="nosotros">
 		<div id="container-nosotros">
 			<h1>Nosotros</h1>
-			<p>Ad cupidatat cupidatat ut qui veniam magna labore anim in cillum occaecat cupidatat non ex ea in ex tempor commodo labore et in dolore nisi esse ullamco id voluptate proident nostrud veniam minim ad ad laboris in enim in sint incididunt ex ullamco laboris veniam cupidatat eu in deserunt dolore est nostrud cillum fugiat labore quis consequat voluptate esse nostrud laboris id eu labore culpa labore pariatur aliqua mollit ut amet consectetur eiusmod exercitation amet cupidatat nostrud enim ea ut culpa cupidatat id sint occaecat officia in consectetur velit dolore cillum dolore veniam officia velit.</p>
+			<p>Anim in fugiat excepteur sunt dolore do cillum aliqua laboris quis eu do duis sint sed enim duis irure consectetur velit non incididunt adipisicing nulla do nisi esse veniam culpa incididunt.</p>
+			<p>Esse incididunt enim est aliquip magna laborum sit reprehenderit quis ut exercitation minim dolor sint aliqua ut excepteur sit cupidatat veniam est excepteur consectetur.</p>
 		</div>
 	</section>
 
 	<section id="entradas">
-		<h1 id="h1Entradas" class="tituloComida">Entradas</h1>
-		<div class="container">        
+		<div id="container-entradas">
+			<h1 id="h1Entradas" class="tituloComida">Entradas</h1>
+		</div>
+		<div class="food-container">        
 			<h5 class="nombreComida">ENSALADA CASERA</h5><br>
 			<h6 class="descripcionComida">Fresco</h6><br>
 			<div class="contenedorVideo">
 				<video id="ensalada1" class="video">
-					<source src="assets/img/ensaladacasera.mp4" type="video/mp4">
-						Your browser does not support HTML5 video.
-					</video>
-					<button class="play">&gt;</button>
-				</div>
+					<source src="assets/img/ensaladacasera.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div> 
+		<div class="food-container">
+			<h5 class="nombreComida">ENSALADA DE POLLO Y MIEL</h5><br>
+			<h6 class="descripcionComida">Nutritivo</h6><br>
+			<div class="contenedorVideo">
+				<video id="ensalada2" class="video">
+					<source src="assets/img/ensalada_polloymiel.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>	
 			</div> 
-			<div class="container">
-				<h5 class="nombreComida">ENSALADA DE POLLO Y MIEL</h5><br>
-				<h6 class="descripcionComida">Nutritivo</h6><br>
-				<div class="contenedorVideo">
-					<video id="ensalada2" class="video">
-						<source src="assets/img/ensalada_polloymiel.mp4" type="video/mp4">
-							Your browser does not support HTML5 video.
-						</video>
-						<button class="play">&gt;</button>	
-					</div> 
-				</div>        
-			</section>
+		</div>        
+	</section>
 
-			<section id="principal">
-				<h1 id="h1Principal" class="tituloComida">Principal</h1>
-				<div class="container">
-					<h5 class="nombreComida">TALLARINES AL AGUACATE</h5><br>
-					<h6 class="descripcionComida">Deliciosos</h6><br>
-					<div class="contenedorVideo">
-						<video id="principal1" class="video">
-							<source src="assets/img/tallarinesDeAguacate.mp4" type="video/mp4">
-								Your browser does not support HTML5 video.
-							</video>
-							<button class="play">&gt;</button>
-						</div>
-					</div> 
-					<div class="container">
-						<h5 class="nombreComida">LASAGNA DE PLÁTANOS</h5><br>
-						<h6 class="descripcionComida">Jugositos</h6><br>
-						<div class="contenedorVideo">
-							<video id="principal2" class="video">
-								<source src="assets/img/lasagnaDePlatano.mp4" type="video/mp4">
-									Your browser does not support HTML5 video.
-								</video>
-								<button class="play">&gt;</button>
-							</div>        	
-						</div>
-					</section>
+	<section id="principal">
+		<div id="container-principal">
+			<h1 id="h1Principal" class="tituloComida">Principales</h1>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">TALLARINES AL AGUACATE</h5><br>
+			<h6 class="descripcionComida">Deliciosos</h6><br>
+			<div class="contenedorVideo">
+				<video id="principal1" class="video">
+					<source src="assets/img/tallarinesDeAguacate.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div> 
+		<div class="food-container">
+			<h5 class="nombreComida">LASAGNA DE PLÁTANOS</h5><br>
+			<h6 class="descripcionComida">Jugositos</h6><br>
+			<div class="contenedorVideo">
+				<video id="principal2" class="video">
+					<source src="assets/img/lasagnaDePlatano.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>        	
+		</div>
+	</section>
 
-					<section id="postres">
-						<h1 id="h1Postres" class="tituloComida">Postre</h1>
-						<div class="container">        
-							<h5 class="nombreComida">PALETAS DE FRUTOS ROJOS</h5><br>
-							<h6 class="descripcionComida">Refrescantes</h6><br>
-							<div class="contenedorVideo">
-								<video id="postres1" class="video">
-									<source src="assets/img/paletasFrutosRojos.mp4" type="video/mp4">
-										Your browser does not support HTML5 video.
-									</video>
-									<button class="play">&gt;</button>
-								</div>
-							</div>
-							<div class="container"> 
-								<h5 class="nombreComida">CHEESE CAKE DE GALLETA</h5><br>
-								<h6 class="descripcionComida">Ricos</h6><br>
-								<div class="contenedorVideo">
-									<video id="postres2" class="video">
-										<source src="assets/img/cheesecakedeGalleta.mp4" type="video/mp4">
-											Your browser does not support HTML5 video.
-										</video>
-										<button class="play">&gt;</button>	
-									</div>        
-								</div>
-							</section>
+	<section id="postres">
+		<div id="container-postres">
+			<h1 id="h1Postres" class="tituloComida">Postres</h1>
+		</div>
+		<div class="food-container">        
+			<h5 class="nombreComida">PALETAS DE FRUTOS ROJOS</h5><br>
+			<h6 class="descripcionComida">Refrescantes</h6><br>
+			<div class="contenedorVideo">
+				<video id="postres1" class="video">
+					<source src="assets/img/paletasFrutosRojos.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+		<div class="food-container"> 
+			<h5 class="nombreComida">CHEESE CAKE DE GALLETA</h5><br>
+			<h6 class="descripcionComida">Ricos</h6><br>
+			<div class="contenedorVideo">
+				<video id="postres2" class="video">
+					<source src="assets/img/cheesecakedeGalleta.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>	
+			</div>        
+		</div>
+	</section>
 
-							<form action="index.html">
-								<h2>Ingresa tus datos para más información</h2>
-								<label for="nombre">Nombres: </label>
-								<input id="nombre" type="text" class="input-registro" placeholder="Escribe tu nombre"><br>
-								<span></span><br><br>
-								<label for="apellidos">Apellidos: </label>
-								<input id="apellido" type="text" class="input-registro" placeholder="Escribe tu apellidos"><br>
-								<span></span><br><br>
-								<label for="email">Correo: </label>
-								<input id="correo" type="email" class="input-registro" placeholder="Escribe tu correo"><br>
-								<span></span><br><br>
-								<button type="submit">Enviar</button>
-							</form>
+	<form action="index.html">
+		<h2>Ingresa tus datos para más información</h2>
+		<label for="nombre">Nombres: </label>
+		<input id="nombre" type="text" class="input-registro" placeholder="Escribe tu nombre"><br>
+		<span></span><br><br>
+		<label for="apellidos">Apellidos: </label>
+		<input id="apellido" type="text" class="input-registro" placeholder="Escribe tu apellidos"><br>
+		<span></span><br><br>
+		<label for="email">Correo: </label>
+		<input id="correo" type="email" class="input-registro" placeholder="Escribe tu correo"><br>
+		<span></span><br><br>
+		<button type="submit">Enviar</button>
+	</form>
 
-							<script src="assets/js/app.js"></script>
-						</body>
-						</html>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>

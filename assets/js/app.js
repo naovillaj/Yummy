@@ -1,33 +1,33 @@
-var x = document.getElementsByClassName("img-slider");
-var dots = document.getElementsByClassName("button-slider");
+// var x = document.getElementsByClassName("img-slider");
+// var dots = document.getElementsByClassName("button-slider");
 
-var slideIndex = 1;
-showDivs(slideIndex);
+// var slideIndex = 1;
+// showDivs(slideIndex);
 
-for (var i = 0; i < dots.length; i++) {
-	dots[i].addEventListener('click',currentDiv(i));
-	console.log(this);
+// for (var i = 0; i < dots.length; i++) {
+// 	dots[i].addEventListener('click',currentDiv(i));
+// 	console.log(this);
 	
-}
+// }
 
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+// function currentDiv(n) {
+//   showDivs(slideIndex = n);
+// }
 
-function showDivs(n) {
-  var i;
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" button-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " button-white";
-}
+// function showDivs(n) {
+//   var i;
+//   if (n > x.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";  
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//      dots[i].className = dots[i].className.replace(" button-white", "");
+//   }
+//   x[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " button-white";
+// }
 
 var Index = 0;
 slider();
@@ -43,8 +43,15 @@ function slider() {
     setTimeout(slider, 3500); 
 }
 
+
+
+
+
+//Videos
 var button = document.getElementsByClassName("play");
 var video = document.getElementsByClassName("video");
+
+
 
 for(var i=1; i<=video.length+1; i++){
 	function playPause() {

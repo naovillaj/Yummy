@@ -1,13 +1,20 @@
-.d-ib{
-	display: inline-block;
-}
 
 body{
 	margin: 0;
 	font-family: 'Libre Franklin';
 }
 
-/*header*/
+
+/*REUSABLES*/
+.d-ib{
+	display: inline-block;
+}
+
+.p-r{
+	position: relative;
+}
+
+/*HEADER*/
 #nav-header{
 	height: 80px;
 	position: fixed;
@@ -18,7 +25,6 @@ body{
 }
 #nav-header ul{
 	margin: 0;
-	position: relative;
 }
 .menu-list{
 	margin: 0 10px;
@@ -29,7 +35,6 @@ body{
 	font-size: 13px;
 	font-weight: 700;
 }
-
 .bg-header{
 	background-color: rgba(0,0,0,0.81);
 }
@@ -55,11 +60,10 @@ body{
 	width: 100%;
 	display: none;
 }
-.button-slider{
+/*.button-slider{
 	margin: 0 8px;
 	height:13px;
 	width:13px;
-	display:inline-block;
 	text-align:center;
 	cursor:pointer;
 	border-radius:50%;
@@ -81,22 +85,20 @@ body{
 	left:48%;
 	bottom:150px;
 }
-/*Nosotros*/
-#nosotros{
-	height: 700px;
-}
-.container{
+*/
+.food-container{
 	display: inline-block;
 	margin: 5px 100px;
-
 }
 
 .tituloComida{
+	color: white;
 	text-align: center;
 	margin: 0 auto;
-	font-size: 60px;
+	font-size: 120px;
 	font-family: 'Leckerli One';
 	font-weight: 300;
+	padding-top: 150px;
 }
 
 .nombreComida{
@@ -121,7 +123,6 @@ body{
 	width: 400px;
 	height: 400px;
 	cursor: pointer;
-	border-radius: 5%;
 }
 
 .video{
@@ -130,41 +131,55 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	cursor: pointer;
 	border-radius: 5%;
 }
 
 .play{
 	background-color: none;
 	display: none;
-
-}
-
-#h1Entradas{
-	color: #62C91A;
-}
-
-#h1Principal{
-	color: #ECB100;
-}
-
-#h1Postres{
-	color: #C80600;
 }
 
 
-/*Nosotros*/
+/*NOSOTROS*/	
+#nosotros{
+	margin: -100px 0;
+	height: 700px;
+}
 #container-nosotros{
 	width: 70%;
 	text-align: center;
 	margin: 0 auto;	
-	padding-top: 50px;
+	padding-top: 100px;
 }
 #container-nosotros h1{
 	font-family: 'Leckerli One';
-	font-size: 60px;
+	font-size: 80px;
+	font-weight: lighter;
 }
 #container-nosotros p{
 	font-size: 20px;
 	letter-spacing: 2px;
+}
+
+#container-entradas,
+#container-principal,
+#container-postres{
+	width: 100%;
+	height: 500px;
+}
+
+
+/*Entradas*/
+#container-entradas{
+	background-image: url('../img/slide4.png');
+}
+
+/*Principal*/
+#container-principal{
+	background-image: url('../img/slide5.png');
+}
+
+/*Postres*/
+#container-postres{
+	background-image: url('../img/slide6.png');
 }
