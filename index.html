@@ -9,61 +9,94 @@
 <body>
 
 	<section id="entradas">
-      <div class="container">
-        <h1 class="">ENTRADAS</h1>
-        <h5 class="">ENSALADA CASERA</h5>
-        <h6 class="">Fresco</h6>
-        <video controls>
-        	<source src="assets/img/ensaladacasera.mp4" type="video/mp4">
-        </video>
-        <h5 class="">ENSALADA DE POLLO Y MIEL</h5>
-        <h6 class="">Nutritivo</h6>
-        <video controls>
-        	<source src="assets/img/ensalada_polloymiel.mp4" type="video/mp4">
-        </video>	
-      </div>
-    </section>
+	  <h1 id="h1Entradas" class="tituloComida">ENTRADAS</h1>
+      <div class="container">        
+        <h5 class="nombreComida">ENSALADA CASERA</h5><br>
+        <h6 class="descripcionComida">Fresco</h6><br>
+        <div class="contenedorVideo">
+        	<video id="ensalada1" class="video">
+        		<source src="assets/img/ensaladacasera.mp4" type="video/mp4">
+        		Your browser does not support HTML5 video.
+        	</video>
+        	<button class="play">&gt;</button>
+        </div>
+       </div> 
+       <div class="container">
+       	<h5 class="nombreComida">ENSALADA DE POLLO Y MIEL</h5><br>
+        <h6 class="descripcionComida">Nutritivo</h6><br>
+        <div class="contenedorVideo">
+        	<video id="ensalada2" class="video">
+	        	<source src="assets/img/ensalada_polloymiel.mp4" type="video/mp4">
+	        	Your browser does not support HTML5 video.
+        	</video>
+        	<button class="play">&gt;</button>	
+        </div> 
+       </div>        
+     </section>
 	
 	<section id="principal">
+	  <h1 id="h1Principal" class="tituloComida">PRINCIPAL</h1>
       <div class="container">
-        <h1 class="">PRINCIPAL</h1>
-        <h5 class="">TALLARINES AL AGUACATE</h5>
-        <h6 class="">Deliciosos</h6>
-        <video controls>
-        	<source src="assets/img/tallarinesDeAguacate.mp4" type="video/mp4">
-        </video>
-        <h5 class="">LASAGNA DE PLÁTANOS</h5>
-        <h6 class="">Jugositos</h6>
-        <video controls>
-        	<source src="assets/img/lasagnaDePlatano.mp4" type="video/mp4">
-        </video>	
+        <h5 class="nombreComida">TALLARINES AL AGUACATE</h5><br>
+        <h6 class="descripcionComida">Deliciosos</h6><br>
+        <div class="contenedorVideo">
+        	<video id="principal1" class="video">
+	        	<source src="assets/img/tallarinesDeAguacate.mp4" type="video/mp4">
+	        	Your browser does not support HTML5 video.
+        	</video>
+        	<button class="play">&gt;</button>
+        </div>
+       </div> 
+       <div class="container">
+        <h5 class="nombreComida">LASAGNA DE PLÁTANOS</h5><br>
+        <h6 class="descripcionComida">Jugositos</h6><br>
+        <div class="contenedorVideo">
+        	<video id="principal2" class="video">
+        		<source src="assets/img/lasagnaDePlatano.mp4" type="video/mp4">
+        		Your browser does not support HTML5 video.
+        	</video>
+        	<button class="play">&gt;</button>
+        </div>        	
       </div>
     </section>
 
  	<section id="postres">
-      <div class="container">
-        <h1 class="">POSTRES</h1>
-        <h5 class="">PALETAS DE FRUTOS ROJOS</h5>
-        <h6 class="">Refrescantes</h6>
-        <video controls>
-        	<source src="assets/img/paletasFrutosRojos.mp4" type="video/mp4">
+ 	  <h1 id="h1Postres" class="tituloComida">POSTRES</h1>
+      <div class="container">        
+        <h5 class="nombreComida">PALETAS DE FRUTOS ROJOS</h5><br>
+        <h6 class="descripcionComida">Refrescantes</h6><br>
+        <div class="contenedorVideo">
+        	<video id="postres1" class="video">
+	        	<source src="assets/img/paletasFrutosRojos.mp4" type="video/mp4">
+	        	Your browser does not support HTML5 video.
+        	</video>
+        	<button class="play">&gt;</button>
+        </div>
+       </div>
+       <div class="container"> 
+        <h5 class="nombreComida">CHEESE CAKE DE GALLETA</h5><br>
+        <h6 class="descripcionComida">Ricos</h6><br>
+        <div class="contenedorVideo">
+        	<video id="postres2" class="video">
+	        	<source src="assets/img/cheesecakedeGalleta.mp4" type="video/mp4">
+	        	Your browser does not support HTML5 video.
         </video>
-        <h5 class="">CHEESE CAKE DE GALLETA</h5>
-        <h6 class="">Ricos</h6>
-        <video controls>
-        	<source src="assets/img/cheesecakedeGalleta.mp4" type="video/mp4">
-        </video>	
+        <button class="play">&gt;</button>	
+        </div>        
       </div>
     </section>
 	
 	<form action="index.html">
 		<h2>Ingresa tus datos para más información</h2>
 		<label for="nombre">Nombres: </label>
-		<input type="text"><br><br>
+		<input id="nombre" type="text" class="input-registro" placeholder="Escribe tu nombre"><br>
+		<span></span><br><br>
 		<label for="apellidos">Apellidos: </label>
-		<input type="text"><br><br>
+		<input id="apellido" type="text" class="input-registro" placeholder="Escribe tu apellidos"><br>
+		<span></span><br><br>
 		<label for="email">Correo: </label>
-		<input type="email"><br><br>
+		<input id="correo" type="email" class="input-registro" placeholder="Escribe tu correo"><br>
+		<span></span><br><br>
 		<button type="submit">Enviar</button>
 	</form>
 

@@ -1,0 +1,64 @@
+.container{
+	display: inline-block;
+	margin: 5px 100px;
+
+}
+
+.tituloComida{
+	margin: 0 auto;
+	font-size: 45px;
+	font-family: 'Leckerli One';
+	padding-left: 45%;
+}
+
+.nombreComida{
+	margin: 0 auto;
+	font-size: 20px;
+	font-family: 'Libre Franklin';
+	display: inline-block;
+}
+
+.descripcionComida{
+	margin: 0 auto;
+	font-size: 15px;
+	font-family:'Advent Pro';
+	display: inline-block;
+}
+
+.contenedorVideo{
+	margin: 0 auto;
+	display: inline-block;
+	position: relative;
+	width: 400px;
+	height: 400px;
+	cursor: pointer;
+	border-radius: 5%;
+}
+
+.video{
+	margin: 0 auto;
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	border-radius: 5%;
+}
+
+.play{
+	background-color: none;
+	display: none;
+
+}
+
+#h1Entradas{
+	color: #62C91A;
+}
+
+#h1Principal{
+	color: #ECB100;
+}
+
+#h1Postres{
+	color: #C80600;
+}
