@@ -78,7 +78,7 @@ body{
 	font-size: 120px;
 	font-family: 'Leckerli One';
 	font-weight: 300px;
-	padding-top: 150px;
+	padding-top: 150px;	
 }
 
 .nombreComida{
@@ -88,6 +88,7 @@ body{
 	font-family: 'Libre Franklin';
 	display: inline-block;
 	font-weight: 300px;
+	cursor: pointer;
 }
 
 .descripcionComida{
@@ -244,6 +245,48 @@ form{
 #formulario span{
 	color: white;
 }
+
+/*Modal*/
+
+.estilos{
+  opacity:0;
+  background-color: rgba(236, 177, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  -webkit-transition: all linear 0.25s;
+  transition: all linear 0.25s;
+  overflow: scroll;
+  visibility: hidden;
+}
+
+.estilos.active{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all linear 0.25s;
+  transition: all linear 0.25s;
+  overflow: scroll;
+}
+
+.estilos span{
+  color: black;
+  font-size: 90px;
+  position: absolute;
+  margin-left: 990px;
+  cursor: pointer;
+}
+
+.receta{
+	display: none;
+}
+
+.aparecer{
+	display: block;
+}
+
 /*Footer*/
 footer{
 	background-color: black;

@@ -72,7 +72,7 @@ for(var i=1; i<=video.length+1; i++){
 		if (this.childNodes[1].paused){
 			this.childNodes[1].play();
 	    	this.childNodes[1].addEventListener("play", function(){
-	    		console.log(this);
+	    		// console.log(this);
 		    	this.setAttribute("controls", "");
 		        this.nextElementSibling.innerText = "||";
 	    	});
@@ -80,7 +80,7 @@ for(var i=1; i<=video.length+1; i++){
 	    }else{
 	    	this.childNodes[1].pause();
 	        this.childNodes[1].addEventListener("pause", function(){
-	        	console.log(this);
+	        	// console.log(this);
 		        this.removeAttribute("controls")
 		        this.nextElementSibling.innerText = ">";
 	        });
@@ -122,6 +122,40 @@ for(var i=0; i<button.length; i++){
 	button[i].parentNode.addEventListener("mouseout", pausePlay);
 
 }
+
+
+
+
+var recetaClick = document.getElementById("modal");
+var tituloRecetas = document.getElementsByClassName("nombreComida");
+var receta = document.getElementsByClassName("receta");
+var boton = document.getElementById("cerrar");
+var p = document.getElementById("recetaModal");
+var body = document.getElementById("body");
+
+for(var i = 1; i<=receta.length; i++){
+	tituloRecetas[i-1].addEventListener("click", function(e){
+		e.preventDefault();
+		recetaClick.classList.toggle("active");
+		this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.setAttribute("class", "aparecer");
+		body.setAttribute("style", "overflow:hidden");
+		recetaClick.childNodes[1].innerHTML = this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+		console.log(recetaClick.childNodes[1]);
+		console.log(this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+		console.log(receta[i-1]);
+	})
+}
+
+boton.addEventListener("click", function(){
+	recetaClick.classList.toggle("active");
+	body.setAttribute("style", "overflow:scroll");
+})
+
+
+
+
+
+
 
 
 var nombre = document.getElementById("nombre");
