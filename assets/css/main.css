@@ -4,7 +4,6 @@ body{
 	font-family: 'Libre Franklin';
 }
 
-
 /*REUSABLES*/
 .d-ib{
 	display: inline-block;
@@ -66,32 +65,7 @@ body{
 	width: 100%;
 	display: none;
 }
-/*.button-slider{
-	margin: 0 8px;
-	height:13px;
-	width:13px;
-	text-align:center;
-	cursor:pointer;
-	border-radius:50%;
-	background-color:transparent;
-	border:1px solid #ccc;
-}
-.button-tranparente{
-	background-color: transparent;
-}
-.button-white{
-	background-color: white;
-}
-.button-slider:hover{
-	background-color:#fff;
-}
-.button-box{
-	display:inline-block;
-	position:absolute;
-	left:48%;
-	bottom:150px;
-}
-*/
+
 .food-container{
 	display: inline-block;
 	margin: 5px 100px;
@@ -211,10 +185,6 @@ body{
 #container-principal{
 	background-image: url('../img/slide5.png');
 }
-
-
-
-
 
 
 #h1Postres{

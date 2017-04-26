@@ -62,10 +62,6 @@ function slider() {
     setTimeout(slider, 3500);
 }
 
-
-
-
-
 //Videos
 var button = document.getElementsByClassName("play");
 var video = document.getElementsByClassName("video");
@@ -203,7 +199,6 @@ enviar.addEventListener("click", function(e){
 
 	}
 })
-
 
 
 var ultimoScrollTop = 0;
