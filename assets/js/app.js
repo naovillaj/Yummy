@@ -199,9 +199,9 @@ enviar.addEventListener("click", function(e){
 		console.log(enviar.nextElementSibling);
 	}else{
 		enviar.nextElementSibling.innerText = "";
+	document.getElementById("formulario").reset();
 
 	}
-	document.getElementById("formulario").reset();
 })
 
 
