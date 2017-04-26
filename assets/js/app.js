@@ -1,8 +1,6 @@
+
 var x = document.getElementsByClassName("img-slider");
 var dots = document.getElementsByClassName("button-slider");
-
-var slideIndex = 1;
-showDivs(slideIndex);
 
 for (var i = 0; i < dots.length; i++) {
 	dots[i].addEventListener('click',currentDiv);
@@ -15,7 +13,7 @@ for (var i = 0; i < dots.length; i++) {
 	}
 	if(i==2){
 		x[2].style.display="block";
-	}	
+	}
 	console.log(this);
 }
 
@@ -31,22 +29,22 @@ function currentDiv(n) {
 	if(n.screenX==428 && n.screenY==358){
 		showDivs(slideIndex+1);
 	}
-  
+
   console.log(n);
 }
 
 function showDivs(n) {
   var i;
-  if (n > x.length) {slideIndex = 1}    
+  if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
+     x[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
      dots[i].className = dots[i].className.replace(" button-white", "");
 
   }
-  x[slideIndex-1].style.display = "block";  
+  x[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " button-white";
 }
 
@@ -56,59 +54,64 @@ slider();
 function slider() {
     var imgSlider = document.getElementsByClassName("img-slider");
     for (var i = 0; i < imgSlider.length; i++) {
-       imgSlider[i].style.display = "none";  
+       imgSlider[i].style.display = "none";
     }
     index++;
-    if (index > imgSlider.length) {index = 1}    
+    if (index > imgSlider.length) {index = 1}
     imgSlider[index-1].style.display = "block";
     setTimeout(slider, 3500);
 }
 
+
+
+
+
+//Videos
 var button = document.getElementsByClassName("play");
 var video = document.getElementsByClassName("video");
-	
+
 for(var i=1; i<=video.length+1; i++){
 	function playPause() {
-		
-		if (this.childNodes[1].paused){ 
+
+		if (this.childNodes[1].paused){
 			this.childNodes[1].play();
 	    	this.childNodes[1].addEventListener("play", function(){
 	    		console.log(this);
 		    	this.setAttribute("controls", "");
 		        this.nextElementSibling.innerText = "||";
 	    	});
-	         
+
 	    }else{
-	    	this.childNodes[1].pause(); 
+	    	this.childNodes[1].pause();
 	        this.childNodes[1].addEventListener("pause", function(){
 	        	console.log(this);
 		        this.removeAttribute("controls")
 		        this.nextElementSibling.innerText = ">";
 	        });
-	        
-	    } 
-	} 
+
+	    }
+	}
 }
 
 for(var i=1; i<=video.length+1; i++){
 	function pausePlay() {
-		
-		if (this.childNodes[1].played){ 
+
+		if (this.childNodes[1].played){
 			this.childNodes[1].pause();
 	    	this.childNodes[1].addEventListener("pause", function(){
 	    		this.removeAttribute("controls", "");
 		        this.nextElementSibling.innerText = ">";
 	    	});
-	         
+
 	    }else{
-	    	this.childNodes[1].play(); 
+	    	this.childNodes[1].play();
 	        this.childNodes[1].addEventListener("play", function(){
 	        	this.setAttribute("controls")
 		        this.nextElementSibling.innerText = "||";
 	        });
-	        
-	    } 
-	} 
+
+	    }
+	}
 }
 
 
@@ -130,9 +133,9 @@ var apellido = document.getElementById("apellido");
 var correo = document.getElementById("correo");
 
 var soloLetras = function(e){
-var codigoTecla = e.keyCode;  
-if((codigoTecla>=97 && codigoTecla<=122) || codigoTecla == 241 || (codigoTecla>=65 && codigoTecla<=90) || codigoTecla == 209 
-    || codigoTecla == 42 || codigoTecla == 250 || codigoTecla == 225 || codigoTecla == 233 || codigoTecla == 237 
+var codigoTecla = e.keyCode;
+if((codigoTecla>=97 && codigoTecla<=122) || codigoTecla == 241 || (codigoTecla>=65 && codigoTecla<=90) || codigoTecla == 209
+    || codigoTecla == 42 || codigoTecla == 250 || codigoTecla == 225 || codigoTecla == 233 || codigoTecla == 237
     || codigoTecla == 243 || codigoTecla == 32){
   return true;
 }else{
@@ -162,7 +165,7 @@ var comentario = function(){
 		    console.log(datoConMayusculas);
 		}
 		  this.value=datoConMayusculas;
-		  
+
 		}
 
 	if(this.getAttribute("type") == "email"){
@@ -171,9 +174,9 @@ var comentario = function(){
 			this.nextElementSibling.nextElementSibling.innerText="*No coincide con el formato establecido (nombre@domain.com)" ;
  		} else {
 			this.nextElementSibling.nextElementSibling.innerText="" ;
-		         
+
 		}
- 	} 
+ 	}
 }
 
 
@@ -190,3 +193,22 @@ document.getElementById("enviar").addEventListener("click", function(e){
 })
 
 
+
+var ultimoScrollTop = 0;
+window.addEventListener('scroll',function(){
+	var navHeader = document.getElementById('nav-header');
+
+	var accionScroll = window.pageYOffset || document.documentElement.scrollTop;
+	if (accionScroll > ultimoScrollTop) {
+		navHeader.classList.remove('bg-header');
+		navHeader.style.opacity = 0;
+	}
+	else{
+		navHeader.classList.add('bg-header');
+		navHeader.style.opacity = 1 ;
+		if (accionScroll <= 3) {
+			navHeader.classList.remove('bg-header');
+		}
+	}
+	ultimoScrollTop = accionScroll;
+},false);

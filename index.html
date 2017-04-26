@@ -5,113 +5,127 @@
 	<title>Proyecto X</title>
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Leckerli+One|Libre+Franklin" rel="stylesheet">
+	<link rel="stylesheet" href="assets/fonts/style.css">
 </head>
 <body>
+
 	<header>
-		<ul>
-			<li class="menu-list"><a href="index.html">INICIO</a></li>
-			<li class="menu-list"><a href="#nosotros">NOSOTROS</a></li>
-			<li class="menu-list"><a href="#">ENTRADAS</a></li>
-			<!-- <li class="menu-list logo-menu"><a href="#"><img src="assets/img/logo.png" alt=""></a></li> -->
-			<li class="logo"><a href="#">Logo</a></li>
-			<li class="menu-list"><a href="#">PRINCIPALES</a></li>
-			<li class="menu-list"><a href="#">POSTRES</a></li>
-			<li class="menu-list"><a href="#">SUSCRIBETE</a></li>
-		</ul>
+		<nav id="nav-header">
+			<ul class="p-r">
+				<li class="menu-list d-ib"><a href="index.html">INICIO</a></li>
+				<li class="menu-list d-ib"><a href="#nosotros">NOSOTROS</a></li>
+				<li class="menu-list d-ib"><a href="#entradas">ENTRADAS</a></li>
+				<li class="logo d-ib"><a href="index.html">Yummy!</a></li>
+				<li class="menu-list d-ib"><a href="#principal">PRINCIPALES</a></li>
+				<li class="menu-list d-ib"><a href="#postres">POSTRES</a></li>
+				<li class="menu-list d-ib"><a href="#suscribirse">SUSCRIBETE</a></li>
+			</ul>
+		</nav>
 	</header>
+
+
 	<section id="slider">
 		<img class="img-slider" src="assets/img/slide1.png" alt="">
 		<img class="img-slider" src="assets/img/slide2.png" alt="">
 		<img class="img-slider" src="assets/img/slide3.png" alt="">
-		<div class="button-box">
-			<span class="button-slider" id="button-slide-1"></span>
-			<span class="button-slider" id="button-slide-2"></span>
-			<span class="button-slider" id="button-slide-3"></span>
-		</div>
+		<!-- <div class="button-box">
+			<span class="button-slider d-ib" id="button-slide-1"></span>
+			<span class="button-slider d-ib" id="button-slide-2"></span>
+			<span class="button-slider d-ib" id="button-slide-3"></span>
+		</div> -->
 	</section>
 	<section id="nosotros">
-		<h1>Nosotros</h1>
-		<p>Ad cupidatat cupidatat ut qui veniam magna labore anim in cillum occaecat cupidatat non ex ea in ex tempor commodo labore et in dolore nisi esse ullamco id voluptate proident nostrud veniam minim ad ad laboris in enim in sint incididunt ex ullamco laboris veniam cupidatat eu in deserunt dolore est nostrud cillum fugiat labore quis consequat voluptate esse nostrud laboris id eu labore culpa labore pariatur aliqua mollit ut amet consectetur eiusmod exercitation amet cupidatat nostrud enim ea ut culpa cupidatat id sint occaecat officia in consectetur velit dolore cillum dolore veniam officia velit aliqua eu officia officia exercitation aute est laborum velit magna laboris aute id ut laborum labore consequat aute amet consequat non in sint et ut nostrud ut non amet ullamco adipisicing cupidatat elit anim dolore nisi aliqua pariatur qui officia in mollit deserunt minim dolore sint duis veniam in ea deserunt aliquip culpa cupidatat consectetur velit reprehenderit excepteur mollit sint excepteur fugiat sit aliqua irure ea proident quis do laboris commodo proident ut ad nostrud veniam enim fugiat non sunt ullamco est irure laborum dolore sunt officia ut nostrud voluptate ut labore velit magna minim ut nulla anim et sed tempor sed ut id amet ut minim in exercitation in laborum eiusmod ea aute in qui irure amet tempor qui in est magna sint tempor dolor aute id.</p>
+		<div id="container-nosotros">
+			<h1>Nosotros</h1>
+			<p>Anim in fugiat excepteur sunt dolore do cillum aliqua laboris quis eu do duis sint sed enim duis irure consectetur velit non incididunt adipisicing nulla do nisi esse veniam culpa incididunt.</p>
+			<p>Esse incididunt enim est aliquip magna laborum sit reprehenderit quis ut exercitation minim dolor sint aliqua ut excepteur sit cupidatat veniam est excepteur consectetur.</p>
+		</div>
 	</section>
 
 	<section id="entradas">
-	  <h1 id="h1Entradas" class="tituloComida">ENTRADAS</h1>
-      <div class="container">        
-        <h5 class="nombreComida">ENSALADA CASERA</h5><br>
-        <h6 class="descripcionComida">Fresco</h6><br>
-        <div class="contenedorVideo">
-        	<video id="ensalada1" class="video">
-        		<source src="assets/img/ensaladacasera.mp4" type="video/mp4">
-        		Your browser does not support HTML5 video.
-        	</video>
-        	<button class="play">&gt;</button>
-        </div>
-       </div> 
-       <div class="container">
-       	<h5 class="nombreComida">ENSALADA DE POLLO Y MIEL</h5><br>
-        <h6 class="descripcionComida">Nutritivo</h6><br>
-        <div class="contenedorVideo">
-        	<video id="ensalada2" class="video">
-	        	<source src="assets/img/ensalada_polloymiel.mp4" type="video/mp4">
-	        	Your browser does not support HTML5 video.
-        	</video>
-        	<button class="play">&gt;</button>	
-        </div> 
-       </div>        
-     </section>
-	
-	<section id="principal">
-	  <h1 id="h1Principal" class="tituloComida">PRINCIPAL</h1>
-      <div class="container">
-        <h5 class="nombreComida">TALLARINES AL AGUACATE</h5><br>
-        <h6 class="descripcionComida">Deliciosos</h6><br>
-        <div class="contenedorVideo">
-        	<video id="principal1" class="video">
-	        	<source src="assets/img/tallarinesDeAguacate.mp4" type="video/mp4">
-	        	Your browser does not support HTML5 video.
-        	</video>
-        	<button class="play">&gt;</button>
-        </div>
-       </div> 
-       <div class="container">
-        <h5 class="nombreComida">LASAGNA DE PLÁTANOS</h5><br>
-        <h6 class="descripcionComida">Jugositos</h6><br>
-        <div class="contenedorVideo">
-        	<video id="principal2" class="video">
-        		<source src="assets/img/lasagnaDePlatano.mp4" type="video/mp4">
-        		Your browser does not support HTML5 video.
-        	</video>
-        	<button class="play">&gt;</button>
-        </div>        	
-      </div>
-    </section>
+		<div id="container-entradas">
+			<h1 id="h1Entradas" class="tituloComida">Entradas</h1>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">ENSALADA CASERA</h5><br>
+			<h6 class="descripcionComida">Fresco</h6><br>
+			<div class="contenedorVideo">
+				<video id="ensalada1" class="video">
+					<source src="assets/img/ensaladacasera.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">ENSALADA DE POLLO Y MIEL</h5><br>
+			<h6 class="descripcionComida">Nutritivo</h6><br>
+			<div class="contenedorVideo">
+				<video id="ensalada2" class="video">
+					<source src="assets/img/ensalada_polloymiel.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+	</section>
 
- 	<section id="postres">
- 	  <h1 id="h1Postres" class="tituloComida">POSTRES</h1>
-      <div class="container">        
-        <h5 class="nombreComida">PALETAS DE FRUTOS ROJOS</h5><br>
-        <h6 class="descripcionComida">Refrescantes</h6><br>
-        <div class="contenedorVideo">
-        	<video id="postres1" class="video">
-	        	<source src="assets/img/paletasFrutosRojos.mp4" type="video/mp4">
-	        	Your browser does not support HTML5 video.
-        	</video>
-        	<button class="play">&gt;</button>
-        </div>
-       </div>
-       <div class="container"> 
-        <h5 class="nombreComida">CHEESE CAKE DE GALLETA</h5><br>
-        <h6 class="descripcionComida">Ricos</h6><br>
-        <div class="contenedorVideo">
-        	<video id="postres2" class="video">
-	        	<source src="assets/img/cheesecakedeGalleta.mp4" type="video/mp4">
-	        	Your browser does not support HTML5 video.
-        </video>
-        <button class="play">&gt;</button>	
-        </div>        
-      </div>
-    </section>
-	
+	<section id="principal">
+		<div id="container-principal">
+			<h1 id="h1Principal" class="tituloComida">Principales</h1>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">TALLARINES AL AGUACATE</h5><br>
+			<h6 class="descripcionComida">Deliciosos</h6><br>
+			<div class="contenedorVideo">
+				<video id="principal1" class="video">
+					<source src="assets/img/tallarinesDeAguacate.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">LASAGNA DE PLÁTANOS</h5><br>
+			<h6 class="descripcionComida">Jugositos</h6><br>
+			<div class="contenedorVideo">
+				<video id="principal2" class="video">
+					<source src="assets/img/lasagnaDePlatano.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+	</section>
+
+	<section id="postres">
+		<div id="container-postres">
+			<h1 id="h1Postres" class="tituloComida">Postres</h1>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">PALETAS DE FRUTOS ROJOS</h5><br>
+			<h6 class="descripcionComida">Refrescantes</h6><br>
+			<div class="contenedorVideo">
+				<video id="postres1" class="video">
+					<source src="assets/img/paletasFrutosRojos.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+		<div class="food-container">
+			<h5 class="nombreComida">CHEESE CAKE DE GALLETA</h5><br>
+			<h6 class="descripcionComida">Ricos</h6><br>
+			<div class="contenedorVideo">
+				<video id="postres2" class="video">
+					<source src="assets/img/cheesecakedeGalleta.mp4" type="video/mp4" />
+					Your browser does not support HTML5 video.
+				</video>
+				<button class="play">&gt;</button>
+			</div>
+		</div>
+	</section>
+
 	<form id="formulario" class="form-subscribe" action="index.html">
 		<h2 id="form-subscribe-heading">Ingresa tus datos para más información</h2>
 		<label for="nombre" class="sr-only">Nombres: </label>
@@ -126,6 +140,32 @@
 		<button id="enviar" class="btn" type="submit">Enviar</button>
 		<span></span>
 	</form>
+	<footer>
+		<div id="container-footer">
+			<div id="text-footer">
+				<div class="box-text menu">
+					<a href="index.html">Inicio</a>
+					<a href="#nosotros">Nosotros</a>
+					<a href="#ensaladas">Ensaladas</a>
+					<a href="#principales">Principales</a>
+					<a href="#postres">Postres</a>
+					<a href="#suscribete">Suscribete</a>
+				</div>
+				<div class="box-text contacto">
+					<p>hola@yummy.com</p>
+					<p>+51 456-2345</p>
+					<p>Av. José Pardo 601</p>
+					<a href="#">www.yummy.com</a>
+				</div>
+				<div class="box-text redes">
+					<a href="#" class="icon-facebook"></a>
+					<a href="#" class="icon-twitter"></a>
+					<a href="#" class="icon-instagram"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 
 	<script src="assets/js/app.js"></script>
 </body>

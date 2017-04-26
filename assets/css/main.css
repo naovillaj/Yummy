@@ -1,50 +1,53 @@
-*{
 
-}
 body{
 	margin: 0;
 	font-family: 'Libre Franklin';
 }
-header{
-	position: fixed;
-	width: 100%;
-	height: 70px;
-	z-index: 1;
-}
-ul{
-	text-align: center;
-	position: relative;
-	/*top: -20px;*/
-	margin: 0;
-	padding: 0;
-}
-li{
+
+
+/*REUSABLES*/
+.d-ib{
 	display: inline-block;
 }
-a{
-	text-decoration: none;
-	color: white;
+
+.p-r{
+	position: relative;
+}
+
+/*HEADER*/
+#nav-header{
+	height: 80px;
+	position: fixed;
+	text-align: center;
+	transition: all 0.6s cubic-bezier(0.7, 0.01, 0.3, 1);
+	width: 100%;
+	z-index: 1;
+}
+#nav-header ul{
+	margin: 0;
 }
 .menu-list{
-	font-weight: 700;
 	margin: 0 10px;
 }
-.logo-menu{
-	position: relative;
-	top: 30px;
+.menu-list a{
+	text-decoration: none;
+	color: white;
+	font-size: 13px;
+	font-weight: 700;
+}
+.bg-header{
+	background-color: rgba(0,0,0,0.81);
 }
 .menu-list:hover a{
 	color: #CA9C22;
 }
-.logo{
-	position: relative;
-	font-family: 'Leckerli One', cursive;
-	font-size: 50px;
-	top: 10px;
-	margin: 0 20px;
-}
 .logo a{
-	
+	font-family: 'Leckerli One', cursive;
+	top: 10px;
+	position: relative;
+	margin: 0 20px;
+	text-decoration: none;
+	font-size: 50px;
 	color: #ECB100;
 }
 
@@ -57,11 +60,10 @@ a{
 	width: 100%;
 	display: none;
 }
-.button-slider{
+/*.button-slider{
 	margin: 0 8px;
 	height:13px;
 	width:13px;
-	display:inline-block;
 	text-align:center;
 	cursor:pointer;
 	border-radius:50%;
@@ -83,21 +85,20 @@ a{
 	left:48%;
 	bottom:150px;
 }
-/*Nosotros*/
-#nosotros{
-	height: 700px;
-}
-.container{
+*/
+.food-container{
 	display: inline-block;
 	margin: 5px 100px;
-
 }
 
 .tituloComida{
+	color: white;
+	text-align: center;
 	margin: 0 auto;
-	font-size: 45px;
+	font-size: 120px;
 	font-family: 'Leckerli One';
-	padding-left: 45%;
+	font-weight: 300;
+	padding-top: 150px;
 }
 
 .nombreComida{
@@ -105,6 +106,7 @@ a{
 	font-size: 20px;
 	font-family: 'Libre Franklin';
 	display: inline-block;
+	font-weight: 300;
 }
 
 .descripcionComida{
@@ -121,7 +123,6 @@ a{
 	width: 400px;
 	height: 400px;
 	cursor: pointer;
-	border-radius: 5%;
 }
 
 .video{
@@ -130,24 +131,56 @@ a{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	cursor: pointer;
 	border-radius: 5%;
 }
 
 .play{
 	background-color: none;
 	display: none;
-
 }
 
-#h1Entradas{
-	color: #62C91A;
+
+/*NOSOTROS*/
+#nosotros{
+	margin: -100px 0;
+	height: 700px;
+}
+#container-nosotros{
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+#container-nosotros h1{
+	font-family: 'Leckerli One';
+	font-size: 80px;
+	font-weight: lighter;
+}
+#container-nosotros p{
+	font-size: 20px;
+	letter-spacing: 2px;
 }
 
-#h1Principal{
-	color: #ECB100;
+#container-entradas,
+#container-principal,
+#container-postres,
+#container-suscribete{
+	background-size: cover;
+	height: 500px;
 }
 
+
+/*Entradas*/
+#container-entradas{
+	background-image: url('../img/slide4.png');
+}
+
+/*Principal*/
+#container-principal{
+	background-image: url('../img/slide5.png');
+}
+
+<<<<<<< HEAD
 #h1Postres{
 	color: #C80600;
 }
@@ -173,7 +206,7 @@ label{
 }
 
 input {
-  
+
   border: 2px solid #999;
   border-radius: 7px;
   -webkit-appearance: none;
@@ -190,4 +223,42 @@ input {
   width: 180px;
   border-radius: 7px;
   margin-left: 200px;
+
+/*Postres*/
+#container-postres{
+	background-image: url('../img/slide6.png');
+}
+
+/*Suscribirse*/
+#container-suscribete{
+	background-image: url('../img/suscribete.png');
+	height: 700px;
+	bottom: 0;
+}
+
+/*Footer*/
+footer{
+	background-color: black;
+}
+#container-footer{
+	background-image: url('../img/footer.png');
+	bottom: 44px;
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+#text-footer{
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	margin-top: 80px;
+}
+.box-text{
+	margin: 0 5%;
+	display: inline-block;
+	width: 250px;
+	height: 100%;
+	background-color: white;
+
 }
