@@ -97,23 +97,49 @@ body{
 	margin: 0 auto;
 	font-size: 120px;
 	font-family: 'Leckerli One';
-	font-weight: 300;
+	font-weight: 300px;
 	padding-top: 150px;
 }
 
 .nombreComida{
-	margin: 0 auto;
+	margin: 5px 10px;
+	margin-left: 90px;
 	font-size: 20px;
 	font-family: 'Libre Franklin';
 	display: inline-block;
-	font-weight: 300;
+	font-weight: 300px;
 }
 
 .descripcionComida{
-	margin: 0 auto;
-	font-size: 15px;
+	margin: 5px 10px;
+	margin-left: 180px;
+	font-size: 18px;
 	font-family:'Advent Pro';
 	display: inline-block;
+}
+
+.ensalada{
+	color: #014900;
+}
+
+.densalada{
+	color: #3E7A00;
+}
+
+.principal{
+	color: #CB7F00;
+}
+
+.dprincipal{
+	color: #E18F00;
+}
+
+.postre{
+	color: #A81825;
+}
+
+.dpostre{
+	color: #E64543;
 }
 
 .contenedorVideo{

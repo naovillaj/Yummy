@@ -185,11 +185,23 @@ for(var i = 0; i< inputs.length; i++){
 inputs[i].onblur = comentario;
 }
 
-document.getElementById("enviar").addEventListener("click", function(e){
-	e.preventDefault();
-	document.getElementById("formulario").reset();
-	document.getElementById("enviar").nextElementSibling.innerText = "Todos los datos deben de estar llenos";
+var nombre = document.getElementById("nombre");
+var apellido = document.getElementById("apellido");
+var correo = document.getElementById("correo");
+var enviar = document.getElementById("enviar");
 
+enviar.addEventListener("click", function(e){
+	e.preventDefault();
+
+
+	if(nombre.value=="" || apellido.value== "" || correo.value==""){
+		enviar.nextElementSibling.innerText = "Todos los datos deben de estar llenos";
+		console.log(enviar.nextElementSibling);
+	}else{
+		enviar.nextElementSibling.innerText = "";
+
+	}
+	document.getElementById("formulario").reset();
 })
 
 
