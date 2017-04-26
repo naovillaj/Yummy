@@ -139,10 +139,11 @@ for(var i = 1; i<=receta.length; i++){
 		recetaClick.classList.toggle("active");
 		this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.setAttribute("class", "aparecer");
 		body.setAttribute("style", "overflow:hidden");
-		recetaClick.childNodes[1].innerHTML = this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
-		console.log(recetaClick.childNodes[1]);
-		console.log(this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
-		console.log(receta[i-1]);
+		recetaClick.childNodes[i].innerHTML="";
+		recetaClick.childNodes[i].appendChild(this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+		// console.log(recetaClick.childNodes[1]);
+		// console.log(this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+		console.log(recetaClick.childNodes[i]);
 	})
 }
 

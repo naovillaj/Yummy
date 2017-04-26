@@ -284,7 +284,12 @@ form{
 }
 
 .aparecer{
-	display: block;
+	border: 6px solid white;
+	border-radius: 8px;
+	display: block;	
+	padding: 10px 40px;	
+	margin: 140px auto;
+	width: 400px;
 }
 
 /*Footer*/
