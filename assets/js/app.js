@@ -62,10 +62,6 @@ function slider() {
     setTimeout(slider, 3500);
 }
 
-
-
-
-
 //Videos
 var button = document.getElementsByClassName("play");
 var video = document.getElementsByClassName("video");
@@ -76,7 +72,7 @@ for(var i=1; i<=video.length+1; i++){
 		if (this.childNodes[1].paused){
 			this.childNodes[1].play();
 	    	this.childNodes[1].addEventListener("play", function(){
-	    		console.log(this);
+	    		// console.log(this);
 		    	this.setAttribute("controls", "");
 		        this.nextElementSibling.innerText = "||";
 	    	});
@@ -84,7 +80,7 @@ for(var i=1; i<=video.length+1; i++){
 	    }else{
 	    	this.childNodes[1].pause();
 	        this.childNodes[1].addEventListener("pause", function(){
-	        	console.log(this);
+	        	// console.log(this);
 		        this.removeAttribute("controls")
 		        this.nextElementSibling.innerText = ">";
 	        });
@@ -127,6 +123,34 @@ for(var i=0; i<button.length; i++){
 
 }
 
+
+
+
+var recetaClick = document.getElementById("modal");
+var tituloRecetas = document.getElementsByClassName("nombreComida");
+var receta = document.getElementsByClassName("receta");
+var boton = document.getElementById("cerrar");
+var p = document.getElementById("recetaModal");
+var body = document.getElementById("body");
+
+for(var i = 1; i<=receta.length; i++){
+	tituloRecetas[i-1].addEventListener("click", function(e){
+		e.preventDefault();
+		recetaClick.classList.toggle("active");
+		this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.setAttribute("class", "aparecer");
+		body.setAttribute("style", "overflow:hidden");
+		recetaClick.childNodes[i].innerHTML="";
+		recetaClick.childNodes[i].appendChild(this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+		// console.log(recetaClick.childNodes[1]);
+		// console.log(this.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+		console.log(recetaClick.childNodes[i]);
+	})
+}
+
+boton.addEventListener("click", function(){
+	recetaClick.classList.toggle("active");
+	body.setAttribute("style", "overflow:scroll");
+})
 
 var nombre = document.getElementById("nombre");
 var apellido = document.getElementById("apellido");
@@ -179,8 +203,6 @@ var comentario = function(){
  	}
 }
 
-
-
 for(var i = 0; i< inputs.length; i++){
 inputs[i].onblur = comentario;
 }
@@ -199,11 +221,10 @@ enviar.addEventListener("click", function(e){
 		console.log(enviar.nextElementSibling);
 	}else{
 		enviar.nextElementSibling.innerText = "";
+	document.getElementById("formulario").reset();
 
 	}
-	document.getElementById("formulario").reset();
 })
-
 
 
 var ultimoScrollTop = 0;
@@ -224,3 +245,14 @@ window.addEventListener('scroll',function(){
 	}
 	ultimoScrollTop = accionScroll;
 },false);
+
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
