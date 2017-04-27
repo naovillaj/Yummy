@@ -288,3 +288,12 @@ footer{
 	background-color: white;
 
 }
+
+input::-webkit-input-placeholder {
+    color:    #c00;
+    font-weight: bold;
+}
+input::-moz-placeholder {
+    color:    #c00;
+    font-weight: bold;
+}
