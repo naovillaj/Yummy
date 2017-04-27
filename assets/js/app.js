@@ -1,37 +1,5 @@
 
 var x = document.getElementsByClassName("img-slider");
-var dots = document.getElementsByClassName("button-slider");
-
-for (var i = 0; i < dots.length; i++) {
-	dots[i].addEventListener('click',currentDiv);
-	// x[i].style.display="block";
-	if(i==0){
-		x[0].style.display="block";
-	}
-	if(i==1){
-		x[1].style.display="block";
-	}
-	if(i==2){
-		x[2].style.display="block";
-	}
-	console.log(this);
-}
-
-function currentDiv(n) {
-	if(n.screenX==367 && n.screenY==355){
-		showDivs(slideIndex-1);
-	}
-
-	if(n.screenX==395 && n.screenY==357){
-		showDivs(slideIndex);
-	}
-
-	if(n.screenX==428 && n.screenY==358){
-		showDivs(slideIndex+1);
-	}
-
-  console.log(n);
-}
 
 function showDivs(n) {
   var i;
@@ -72,15 +40,13 @@ for(var i=1; i<=video.length+1; i++){
 		if (this.childNodes[1].paused){
 			this.childNodes[1].play();
 	    	this.childNodes[1].addEventListener("play", function(){
-	    		// console.log(this);
-		    	this.setAttribute("controls", "");
-		        this.nextElementSibling.innerText = "||";
+					this.setAttribute("controls", "");
+		      this.nextElementSibling.innerText = "||";
 	    	});
 
 	    }else{
 	    	this.childNodes[1].pause();
 	        this.childNodes[1].addEventListener("pause", function(){
-	        	// console.log(this);
 		        this.removeAttribute("controls")
 		        this.nextElementSibling.innerText = ">";
 	        });
@@ -112,19 +78,12 @@ for(var i=1; i<=video.length+1; i++){
 
 
 for(var i=0; i<button.length; i++){
-
 	button[i].parentNode.addEventListener("mouseover", playPause);
-
 }
 
 for(var i=0; i<button.length; i++){
-
 	button[i].parentNode.addEventListener("mouseout", pausePlay);
-
 }
-
-
-
 
 var recetaClick = document.getElementById("modal");
 var tituloRecetas = document.getElementsByClassName("nombreComida");
@@ -245,14 +204,3 @@ window.addEventListener('scroll',function(){
 	}
 	ultimoScrollTop = accionScroll;
 },false);
-
-var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
