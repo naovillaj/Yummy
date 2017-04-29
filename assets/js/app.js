@@ -2,33 +2,33 @@
 var x = document.getElementsByClassName("img-slider");
 
 function showDivs(n) {
-  var i;
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" button-white", "");
+	var i;
+	if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" button-white", "");
 
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " button-white";
-}
+			}
+			x[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " button-white";
+		}
 
-var index = 0;
-slider();
+		var index = 0;
+		slider();
 
-function slider() {
-    var imgSlider = document.getElementsByClassName("img-slider");
-    for (var i = 0; i < imgSlider.length; i++) {
-       imgSlider[i].style.display = "none";
-    }
-    index++;
-    if (index > imgSlider.length) {index = 1}
-    imgSlider[index-1].style.display = "block";
-    setTimeout(slider, 3500);
-}
+		function slider() {
+			var imgSlider = document.getElementsByClassName("img-slider");
+			for (var i = 0; i < imgSlider.length; i++) {
+				imgSlider[i].style.display = "none";
+			}
+			index++;
+			if (index > imgSlider.length) {index = 1}
+				imgSlider[index-1].style.display = "block";
+			setTimeout(slider, 3500);
+		}
 
 //Videos
 var button = document.getElementsByClassName("play");
@@ -38,20 +38,20 @@ for(var i=1; i<=video.length+1; i++){
 	function playPause() {
 
 		if (this.childNodes[1].paused){
-			this.childNodes[1].play();
+				this.childNodes[1].play();
 	    	this.childNodes[1].addEventListener("play", function(){
-					this.setAttribute("controls", "");
-		      this.nextElementSibling.innerText = "||";
+				this.setAttribute("controls", "");
+		    this.nextElementSibling.innerText = "||";
 	    	});
 
 	    }else{
 	    	this.childNodes[1].pause();
-	        this.childNodes[1].addEventListener("pause", function(){
-		        this.removeAttribute("controls")
-		        this.nextElementSibling.innerText = ">";
-	        });
+	      this.childNodes[1].addEventListener("pause", function(){
+		    this.removeAttribute("controls")
+      	this.nextElementSibling.innerText = ">";
+	      });
 
-	    }
+		}
 	}
 }
 
@@ -60,19 +60,19 @@ for(var i=1; i<=video.length+1; i++){
 
 		if (this.childNodes[1].played){
 			this.childNodes[1].pause();
-	    	this.childNodes[1].addEventListener("pause", function(){
-	    		this.removeAttribute("controls", "");
-		        this.nextElementSibling.innerText = ">";
-	    	});
+			this.childNodes[1].addEventListener("pause", function(){
+				this.removeAttribute("controls", "");
+				this.nextElementSibling.innerText = ">";
+			});
 
-	    }else{
-	    	this.childNodes[1].play();
-	        this.childNodes[1].addEventListener("play", function(){
-	        	this.setAttribute("controls")
-		        this.nextElementSibling.innerText = "||";
-	        });
+		}else{
+			this.childNodes[1].play();
+			this.childNodes[1].addEventListener("play", function(){
+				this.setAttribute("controls")
+				this.nextElementSibling.innerText = "||";
+			});
 
-	    }
+		}
 	}
 }
 
@@ -116,27 +116,27 @@ var apellido = document.getElementById("apellido");
 var correo = document.getElementById("correo");
 
 var soloLetras = function(e){
-var codigoTecla = e.keyCode;
-if((codigoTecla>=97 && codigoTecla<=122) || codigoTecla == 241 || (codigoTecla>=65 && codigoTecla<=90) || codigoTecla == 209
-    || codigoTecla == 42 || codigoTecla == 250 || codigoTecla == 225 || codigoTecla == 233 || codigoTecla == 237
-    || codigoTecla == 243 || codigoTecla == 32){
-  return true;
+	var codigoTecla = e.keyCode;
+	if((codigoTecla>=97 && codigoTecla<=122) || codigoTecla == 241 || (codigoTecla>=65 && codigoTecla<=90) || codigoTecla == 209
+		|| codigoTecla == 42 || codigoTecla == 250 || codigoTecla == 225 || codigoTecla == 233 || codigoTecla == 237
+		|| codigoTecla == 243 || codigoTecla == 32){
+		return true;
 }else{
-  return false;
+	return false;
 }
 }
 
 nombre.onkeypress = soloLetras;
 apellido.onkeypress = soloLetras;
 
- var inputs = document.getElementsByClassName("input-registro");
+var inputs = document.getElementsByClassName("input-registro");
 
 var comentario = function(){
 	if(this.value.trim().length==0){
-	   this.value="";
-	   this.nextElementSibling.nextElementSibling.innerText="*Este elemento es obligatorio" ;
+		this.value="";
+		this.nextElementSibling.nextElementSibling.innerText="*Este elemento es obligatorio" ;
 	} else {
-	   this.nextElementSibling.nextElementSibling.innerText="" ;
+		this.nextElementSibling.nextElementSibling.innerText="" ;
 	}
 
 	if(this.getAttribute("type") == "text"){
@@ -144,26 +144,26 @@ var comentario = function(){
 		var arrDato = this.value.split(" ");
 		var datoConMayusculas = "";
 		for(var i = 0; i<arrDato.length; i++){
-		    datoConMayusculas += arrDato[i].charAt(0).toUpperCase() + arrDato[i].substring(1).toLowerCase() + " ";
-		    console.log(datoConMayusculas);
+			datoConMayusculas += arrDato[i].charAt(0).toUpperCase() + arrDato[i].substring(1).toLowerCase() + " ";
+			console.log(datoConMayusculas);
 		}
-		  this.value=datoConMayusculas;
+		this.value=datoConMayusculas;
 
-		}
+	}
 
 	if(this.getAttribute("type") == "email"){
- 		var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		if ( !expr.test(this.value) ){
 			this.nextElementSibling.nextElementSibling.innerText="*No coincide con el formato establecido (nombre@domain.com)" ;
- 		} else {
+		} else {
 			this.nextElementSibling.nextElementSibling.innerText="" ;
 
 		}
- 	}
+	}
 }
 
 for(var i = 0; i< inputs.length; i++){
-inputs[i].onblur = comentario;
+	inputs[i].onblur = comentario;
 }
 
 var nombre = document.getElementById("nombre");
@@ -180,7 +180,7 @@ enviar.addEventListener("click", function(e){
 		console.log(enviar.nextElementSibling);
 	}else{
 		enviar.nextElementSibling.innerText = "";
-	document.getElementById("formulario").reset();
+		document.getElementById("formulario").reset();
 
 	}
 })
