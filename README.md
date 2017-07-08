@@ -20,7 +20,7 @@ Se utilizaron los eventos: onclick, onreset, onsubmit, onplay, onpause en este p
 
 ## Lanzamiento 
 
-Esta es la versión final de la página web <a href="https://naovillaj.github.io/Yummy/">Yummy</a> 
+Esta es la versión final de la página web <a href="https://naovillaj.github.io/Yummy/" target="_blank">Yummy</a> 
 
 ## Desarrollado con
 
